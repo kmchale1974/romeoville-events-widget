@@ -11,13 +11,13 @@
       background: #f5f8fa;
       font-family: sans-serif;
       color: #333;
-      text-align: center;
     }
 
     h1 {
       font-size: 2em;
       color: #002855;
-      margin-top: 1rem;
+      text-align: center;
+      margin: 1rem 0 0.5rem;
       border-bottom: 4px solid #f15a24;
       display: inline-block;
       padding-bottom: 0.25rem;
@@ -27,18 +27,15 @@
       height: 950px;
       overflow: hidden;
       position: relative;
-      margin: 1rem auto;
       width: 100%;
     }
 
-    .center-wrapper {
-      width: 100%;
+    .scroll-wrapper {
       display: flex;
       justify-content: center;
     }
 
     .scroll-content {
-      display: inline-block;
       animation: scroll-up 40s linear infinite;
     }
 
@@ -48,7 +45,7 @@
     }
 
     .event {
-      background: #fff;
+      background: #ffffff;
       border-left: 6px solid #f15a24;
       padding: 12px 16px;
       margin: 12px auto;
@@ -60,7 +57,7 @@
     }
 
     .title {
-      font-size: 1.3em;
+      font-size: 1.2em;
       font-weight: bold;
       color: #002855;
     }
@@ -68,7 +65,18 @@
     .datetime, .location {
       font-size: 0.95em;
       color: #555;
-      margin-top: 0.2rem;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .event {
+        width: 95%;
+        padding: 10px 14px;
+      }
     }
   </style>
 </head>
@@ -76,7 +84,7 @@
   <h1>Romeoville Upcoming Events</h1>
 
   <div class="scroll-container">
-    <div class="center-wrapper">
+    <div class="scroll-wrapper">
       <div class="scroll-content" id="scroll-content">
         <!-- BEGIN EVENTS -->
         <div class="event">
