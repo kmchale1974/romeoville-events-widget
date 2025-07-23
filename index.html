@@ -19,15 +19,8 @@
     max-width: 900px;
     margin: auto;
     padding: 20px;
-    animation: scrollPage 60s linear infinite;
-    position: relative;
-  }
-
-  @keyframes scrollPage {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
-  }
-
+      }
+ 
   h1 {
     font-size: 2em;
     color: #002855;
@@ -133,6 +126,18 @@
         <div class="datetime">July 28, 2025 | 11:00 AM - 12:00 PM</div>
         <div class="location">201 W. Normantown Road, Romeoville, IL 60446</div>
     </div>
+<script>
+  let scrollInterval = setInterval(() => {
+    window.scrollBy(0, 1); // scroll down 1px
+  }, 100); // every 100ms
+
+  // Optional: reset to top when fully scrolled
+  setInterval(() => {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      window.scrollTo(0, 0);
+    }
+  }, 5000);
+</script>
 
 </body>
 </html>
