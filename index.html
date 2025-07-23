@@ -11,7 +11,9 @@
       background: #f5f8fa;
       font-family: sans-serif;
       color: #333;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     h1 {
@@ -19,24 +21,24 @@
       color: #002855;
       margin: 1rem 0 0.5rem;
       border-bottom: 4px solid #f15a24;
-      display: inline-block;
       padding-bottom: 0.25rem;
+      text-align: center;
     }
 
     .scroll-container {
       height: 950px;
       overflow: hidden;
       width: 100%;
+      max-width: 700px;
       position: relative;
     }
 
     .scroll-wrapper {
-      display: block;
+      position: relative;
       width: 100%;
     }
 
     .scroll-content {
-      display: block;
       animation: scroll-up 40s linear infinite;
     }
 
@@ -51,10 +53,8 @@
       padding: 12px 16px;
       margin: 12px auto;
       width: 90%;
-      max-width: 600px;
       border-radius: 4px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      text-align: left;
     }
 
     .title {
@@ -119,16 +119,13 @@
         </div>
         <!-- END EVENTS -->
       </div>
-      <!-- Duplicate added via JS below -->
     </div>
   </div>
 
   <script>
-    // Force vertical stacking of the duplicate content
-    const scroller = document.getElementById('scroll-content');
-    const clone = scroller.cloneNode(true);
-    clone.style.display = 'block';
-    document.getElementById('scroll-wrapper').appendChild(clone);
+    const scrollContent = document.getElementById('scroll-content');
+    const clone = scrollContent.cloneNode(true);
+    scrollContent.parentNode.appendChild(clone);
   </script>
 </body>
 </html>
