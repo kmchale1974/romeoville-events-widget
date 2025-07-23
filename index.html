@@ -11,12 +11,12 @@
       background: #f5f8fa;
       font-family: sans-serif;
       color: #333;
+      text-align: center;
     }
 
     h1 {
       font-size: 2em;
       color: #002855;
-      text-align: center;
       margin: 1rem 0 0.5rem;
       border-bottom: 4px solid #f15a24;
       display: inline-block;
@@ -91,48 +91,44 @@
         <div class="event">
           <div class="title">Youth Fire Safety Camp</div>
           <div class="datetime">July 21–25, 2025 | 09:00 AM – 02:00 PM</div>
-          <div class="location">1321 Enterprise Drive, Romeoville, IL 60446</div>
+          <div class="location">1321 Enterprise Drive, Romeoville, IL</div>
         </div>
 
         <div class="event">
           <div class="title">Blood Drive</div>
           <div class="datetime">July 21, 2025 | 12:00 PM – 05:00 PM</div>
-          <div class="location">1293 Windham Parkway, Romeoville, IL 60446</div>
+          <div class="location">1293 Windham Parkway, Romeoville, IL</div>
         </div>
 
         <div class="event">
           <div class="title">Pickleball Club at Village Park</div>
           <div class="datetime">July 21, 2025 | 05:00 PM – 09:00 PM</div>
-          <div class="location">900 W Romeo Road, Romeoville, IL 60446</div>
+          <div class="location">900 W Romeo Road, Romeoville, IL</div>
         </div>
 
         <div class="event">
-          <div class="title">Teen Escape Room: Dungeons & Dragons</div>
+          <div class="title">Teen Escape Room</div>
           <div class="datetime">July 21, 2025 | 06:00 PM – 07:00 PM</div>
-          <div class="location">201 W. Normantown Road, Romeoville, IL 60446</div>
+          <div class="location">201 W. Normantown Rd, Romeoville, IL</div>
         </div>
 
         <div class="event">
           <div class="title">White Oak Library Pinochle Club</div>
           <div class="datetime">July 22, 2025 | 09:30 AM – 12:30 PM</div>
-          <div class="location">201 W. Normantown Road, Romeoville, IL 60446</div>
-        </div>
-
-        <div class="event">
-          <div class="title">Valley View School District Job Fair</div>
-          <div class="datetime">July 22, 2025 | 01:00 PM – 03:00 PM</div>
-          <div class="location">Romeoville, IL 60446</div>
+          <div class="location">201 W. Normantown Rd, Romeoville, IL</div>
         </div>
         <!-- END EVENTS -->
       </div>
+      <!-- Duplicate added via JS below -->
     </div>
   </div>
 
   <script>
-    // Duplicate content for infinite scrolling
+    // Force vertical stacking of the duplicate content
     const scroller = document.getElementById('scroll-content');
     const clone = scroller.cloneNode(true);
-    scroller.parentNode.appendChild(clone);
+    clone.style.display = 'block';
+    document.getElementById('scroll-wrapper').appendChild(clone);
   </script>
 </body>
 </html>
