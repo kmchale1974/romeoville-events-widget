@@ -26,16 +26,17 @@
     .scroll-container {
       height: 950px;
       overflow: hidden;
-      position: relative;
       width: 100%;
+      position: relative;
     }
 
     .scroll-wrapper {
-      display: flex;
-      justify-content: center;
+      display: block;
+      width: 100%;
     }
 
     .scroll-content {
+      display: block;
       animation: scroll-up 40s linear infinite;
     }
 
@@ -84,7 +85,7 @@
   <h1>Romeoville Upcoming Events</h1>
 
   <div class="scroll-container">
-    <div class="scroll-wrapper">
+    <div class="scroll-wrapper" id="scroll-wrapper">
       <div class="scroll-content" id="scroll-content">
         <!-- BEGIN EVENTS -->
         <div class="event">
@@ -128,6 +129,7 @@
   </div>
 
   <script>
+    // Duplicate content for infinite scrolling
     const scroller = document.getElementById('scroll-content');
     const clone = scroller.cloneNode(true);
     scroller.parentNode.appendChild(clone);
